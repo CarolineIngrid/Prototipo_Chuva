@@ -9,7 +9,7 @@ body{
   width: 100%;
   color:white;
   text-align: center;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 30px;
   line-height: 35px;
@@ -121,23 +121,106 @@ main{
 #video{
   width: 783px;
   height: 439px;
+  margin-left: -60px;
 }
 
 .resumo{
   width: 1058px;
   height: 189px;
-  margin-left: 150px;
-  margin-top: 100px;
+  margin-left: 210px;
+  margin-top: 30px;
   border: 1px solid #ECECEC;
   box-sizing: border-box;
   border-radius: 3px;
 }
 
+.discussoes{
+  width: 1058px;
+  height: 621px;
+  margin-left: 210px;
+  margin-top: 30px;
+  border: 1px solid #ECECEC;
+  box-sizing: border-box;
+  border-radius: 3px;
+  position: relative;
+}
+
+.icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#list1, #list2, #list3{
+  list-style-type: none;
+}
+
+.btn_topico{
+  /* display: flex; */
+  background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+  border-radius: 4px;
+  width: 133px;
+  height: 32px;
+  border: 0px;
+  box-shadow: 0px 2px 2px 0px #0000003D;
+  box-shadow: 0px 0px 2px 0px #0000001F;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  position: absolute;
+  right: 40%;
+  
+}
+
+.divisoria{
+  width: 1027px;
+  height: 0px;
+  left: 16px;
+  margin-top: 15px;
+  border: 1px solid #E7E7E7;
+  justify-content: center;
+  margin-left: 10px;
+  mix-blend-mode: unset;
+  
+}
+
+.assunto1{
+  border: 1px solid #E7E7E7;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  border: 1px solid #ECECEC;
+  width: 1028px;
+  height: 148px;
+  align-items: center;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.assunto2{
+  border: 1px solid #E7E7E7;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  border: 1px solid #ECECEC;
+  width: 1028px;
+  height: 148px;
+  align-items: center;
+  margin: auto;
+  margin-top: 30px;
+}
+
+footer{
+  width: 1086px;
+  height: 181px;
+  margin-left: 17%;
+  margin-top: 10%;
+}
+
+
 
 
 /* ---------------TIPOGRAFIA----------------- */
 .titulo{
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
@@ -157,30 +240,81 @@ ul.side-list > li > a{
 main>h1{
   color: #EE7A3A;
   font-size: 20px;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 900;
-  margin-left: -150px;
+  margin-left: -20px;
 }
 
-.resumo{
-  font-family: Quicksand;
-  font-style: normal;
-  font-weight: normal;
+.resumo>p{
+  font-family: 'Quicksand', sans-serif;
   font-size: 14px;
   line-height: 23px;
   letter-spacing: 0.02em;
   color: #5C5C5C;
 }
 
-.resumo>h3{
+.resumo>h3, .discussoes>h3{
   background: #FDF1EB;
+  margin-top: -1px;
+  padding-top: 15px;
   border: 1px solid #ECECEC;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300px;
+  font-size: 20px;
+  line-height:25px;
+  color: #4E4E4E;
+}
+
+.btn_topico{
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+
+
+}
+
+.discussoes>h4, .assunto1>h4, .assunto2>h4{
+  font-family: 'Quicksand', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ED7839;
+  margin-left: 10px;
+}
+
+.discussoes>p{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  color: #5C5C5C;
+  align-items: center;
+  margin:auto;
+  text-align: center;
+}
+
+.assunto1>p, .assunto2>p{
+  margin-top: -20px;
+  margin-left: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  font-weight: normal;
+  line-height: 17px;
+  color: #4D4D4D;
+}
+
+#strong{
+  font-weight: 700px;
 }
 
 /* ===================================Media Queries=============================== */
-@media screen and (max-width: 767px){
+/* @media screen and (max-width: 767px){
   .head{
     display: flex;
     justify-content: left;
@@ -188,6 +322,8 @@ main>h1{
     background: #FDF1EB;
     height:90px;
     width: 86%;
+    padding: 5%;
+    margin: 5%;
     padding-top: -90%;
     padding-left: 16%;
     font-family: Roboto;
@@ -202,7 +338,7 @@ main>h1{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 26px;
     padding-bottom: 5px;
   
@@ -221,4 +357,14 @@ main>h1{
     margin: 10px 0px 0px 20px;
   }
 
-}
+  #video{
+    width: 60%;
+    height: 40%;
+  }
+
+  .simposio_issn{
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+
+} */
